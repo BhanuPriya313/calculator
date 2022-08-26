@@ -10,6 +10,7 @@ exports.calculate = function(req, res) {
     res.json({ error: err.message });
   });
 
+  // add function change
   var operations = {
     'add': function(a,b) { return a + b },
     'subtract': function(a,b) { return a - b },
@@ -17,7 +18,7 @@ exports.calculate = function(req, res) {
     'divide':   function(a,b) { return a / b },
   };
 
-  // Determine the operation
+  // Determine the operation 
 
   if (! req.query.operation) {
     throw new Error("Unspecified operation");
